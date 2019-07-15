@@ -1,0 +1,39 @@
+<nav>
+  <div
+    class="nav nav-tabs"
+    id="nav-tab"
+    style="margin-left:50px;margin-bottom: 20px;"
+    role="tablist"
+  >
+    <a
+      class="nav-item nav-link active"
+      (click)="onClick('profile')"
+      [style.color]="result === 'profile' ? 'blue' : 'black'"
+      style="cursor: pointer"
+      >Profile</a
+    >
+    <a
+      class="nav-item nav-link active"
+      style="cursor: pointer"
+      (click)="onClick('posts')"
+      [style.color]="result === 'posts' ? 'blue' : 'black'"
+      >Posts</a
+    >
+  </div>
+</nav>
+
+<ul *ngIf="result === 'posts'">
+  <li *ngFor="let img of post">
+    <img
+      *ngIf="this.id.uid === img.uid"
+      [src]="img.downloadURL"
+      class="card-img-top img"
+      alt=""
+    />
+  </li>
+</ul>
+<ul *ngIf="result === 'profile'">
+  <li *ngFor="let img of pics">
+    <img [src]="img.downloadURL" class="card-img-top img" alt="" />
+  </li>
+</ul>

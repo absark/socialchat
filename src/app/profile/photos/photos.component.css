@@ -1,0 +1,26 @@
+ul{
+    padding: 0; width: 100%;margin: 1px auto;
+    margin-left: 8%;
+    
+}
+  
+li{display: inline;}
+.img{
+    margin: 2px;
+    border: 1px solid black;
+    width:200px;
+    height: 200px;
+
+    
+}
+@media(max-width:300px){
+    ul{ margin-left: 30%;width: 100%;}
+    .img{width: 80px;
+         height: 80px;
+        justify-items: center;}
+}
+hr{margin: 0;}
+.select{color:blue;}
+
+
+nav{margin: 0;width:700px;}

@@ -1,0 +1,15 @@
+<div>
+  <img src="./assets/sobg.jpg" alt="backgroundImage" id="bg" />
+  <div class="box">
+    <h2>Register</h2>
+     <input type="text" placeholder="Display Name" [(ngModel)]="name" required>
+    <input type="email" placeholder="Email" [(ngModel)]="email" required />
+    <input type="password" placeholder="Password" [(ngModel)]="password" required />
+
+    <button type="submit" (click)="onSubmit()">
+      SignUp
+    </button>
+    <a routerLink="/signin">LogIn</a>
+  </div>
+ <p *ngIf=" authService.userData as user">{{user.email}}</p>
+</div>

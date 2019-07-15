@@ -1,0 +1,75 @@
+<div class='container' *ngFor="let u of list">
+   
+  <div class="card " *ngIf="userData.uid===u.uid">
+    <i class="material-icons"routerLink="/header"style="width:40px;height: 40px;">
+      keyboard_backspace
+      
+      </i>
+     
+      
+    
+      <div *ngIf="u.downloadURL; then name; else default"></div>
+        <ng-template #name>
+          <div class="img_cont_msg">
+            <img [src]="u.downloadURL"  alt="not found" class="rounded-circle user_img_msg img">
+            <div class="box">
+              <input type="file"style="display:none;"#file (change)=onEditPic($event)>
+              
+              <i class="material-icons"(click)="file.click()">add_circle</i>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #default>
+          <div class="img_cont_msg">
+            <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png"
+              class="rounded-circle user_img_msg img">
+            <div class="box">
+              <input type="file"style="display:none;"#file (change)=onEditPic($event)>
+              
+              <i class="material-icons"(click)="file.click()">add_circle</i>
+            </div>
+          </div>
+        </ng-template>
+        
+      
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12" style="text-align:center;">
+            <label for="displayName">Name:</label>
+            <span class="name">{{u.displayName}}</span>
+        </div>
+      </div>
+
+
+      <div class="row content">
+          <div class="col">
+             <span><a routerLink="/about" style="font-family: 'Open Sans Condensed', sans-serif;
+              font-family: 'Slabo 27px', serif;"routerLinkActive="router-link-active"  (click)="select('about')">About</a></span>
+          </div>
+      
+    
+           <div class="col">
+            <span><a [routerLink]="['/photos']" style="font-family: 'Open Sans Condensed', sans-serif;
+              font-family: 'Slabo 27px', serif;"srouterLinkActive="router-link-active" (click)="select('photos')" >Photos</a></span>
+           </div>
+    
+      
+          <div class="col">
+        <span><a  style="cursor:pointer;font-family: 'Open Sans Condensed', sans-serif;
+          font-family: 'Slabo 27px', serif;" (click)="select('friends')">Friends</a></span>
+      </div>
+      </div>
+      <hr>
+    </div>
+    
+    
+    
+    
+    <div class="row" *ngIf="value==='photos'" >
+        <app-photos style="width:inherit;"[id]="userData" [pics]="profile"  [post]="posts"></app-photos>
+      </div>
+      <div class="col-md-12 " *ngIf="value==='friends'"s>
+        <app-active-frd></app-active-frd>
+      </div>
+  </div>
+</div>

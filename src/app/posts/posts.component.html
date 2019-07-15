@@ -1,0 +1,26 @@
+<div class="container">
+  <img src="./assets/sobg.jpg" alt="backgroundImage" id="bg" />
+  <form class="col-sm-12 box">
+    <input
+      type="file"
+      (change)="onFileSelected($event)"
+      style="margin-top:3%;"
+    />
+    <input
+      type="text"
+      #msg
+      placeholder="Write Something...."
+      style="margin: 4px;"
+      class="form-control"
+    />
+    <button class="btn btn-primary" (click)="onSubmit(msg.value)">Post</button>
+    <div
+      *ngIf="show"
+      class="alert alert-danger"
+      style="margin-top:30px;"
+      role="alert"
+    >
+      wait it may take a few seconds
+    </div>
+  </form>
+</div>

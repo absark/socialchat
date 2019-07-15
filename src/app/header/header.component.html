@@ -1,0 +1,51 @@
+<mat-sidenav-container class="sidenav-container" style="overflow-y:hidden">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <div class="ex4">
+      <div class=" justify-content-center" style="height:63px;background-color: #3F51B5">
+        <a routerLink="/profile" class="text-align:center" >
+          <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-4.png"style="margin:8px 40%;"></a>
+        
+      </div>
+       
+      <hr />
+      <div class=" ex3">
+        <app-sidenav></app-sidenav>
+      </div>
+    </div>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content class="conta">
+      <mat-toolbar color="primary" class="header">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="(isHandset$ | async)"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>socialApp</span>
+        
+        </mat-toolbar>
+
+    <!-- Add Content Here -->
+    <div  class=" r">
+      
+      <app-home></app-home>
+      
+    </div>
+    <div class="sidebar">
+      <app-navbar> </app-navbar>
+    </div>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

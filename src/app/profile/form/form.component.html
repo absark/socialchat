@@ -1,0 +1,82 @@
+<div style="margin: 10px 15%;background-color: rgb(168, 164, 164)">
+    
+  <div class="row" style="margin: 10px 15%;">
+      <div class="col-md-12" style="padding:15px;text-align: center;">Education
+          <hr>
+        </div>
+       
+            <input type="hidden" 
+            [(ngModel)]="this.service.userInfo.id"
+            class="form-control">
+        
+    <div class="col-md-10">
+      <label for="">Work Experience</label>
+      <input type="text"
+      [(ngModel)]="this.service.userInfo.work"
+      class="form-control">
+    </div>
+
+    <div class="col-md-10">
+        <label for="">Add High School</label>
+        <input type="text"
+        [(ngModel)]="this.service.userInfo.high"
+        class="form-control">
+      </div>
+      <div class="col-md-10">
+          <label for="">Add Inter Mediate</label>
+          <input type="text"
+          [(ngModel)]="this.service.userInfo.inter"
+          class="form-control">
+        </div>
+        <div class="col-md-10">
+            <label for="">College</label>
+            <input type="text"
+            [(ngModel)]="this.service.userInfo.college"
+            class="form-control">
+          </div>
+      </div>
+
+      <div class="row" style="margin: 10px 15%;">
+        <div class="col-md-12" style="padding:15px;text-align: center;">Basic Information
+          <hr>
+        </div>
+          <div class="col-md-5">
+            <label for="">Gender</label>
+            <input type="text"
+            [(ngModel)]="this.service.userInfo.gender"
+            class="form-control">
+          </div>
+      
+          <div class="col-md-5">
+              <label for="">Languages</label>
+              <input type="text"
+              [(ngModel)]="this.service.userInfo.lang"
+              class="form-control">
+            </div>
+            <div class="col-md-5">
+                <label for="">Religious</label>
+                <input type="text"
+                [(ngModel)]="this.service.userInfo.religious"
+                class="form-control">
+              </div>
+              <div class="col-md-5">
+                  <label for="">Hobbies</label>
+                  <input type="text"
+                  [(ngModel)]="this.service.userInfo.hobbies"
+                  class="form-control">
+                </div>
+                        <div class="col-md-10">
+                            <label for="">Address</label>
+                            <input type="text"
+                            [(ngModel)]="this.service.userInfo.addr"
+                            class="form-control">
+                          </div>
+                      
+            </div>
+      <button (click)="onSubmit()"
+      style="margin: 10px 40%;"
+      class="btn btn-primary"
+      (click)="onClick()">submit</button>
+</div>
+
+

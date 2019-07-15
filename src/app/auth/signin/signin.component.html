@@ -1,0 +1,15 @@
+<div>
+  <img src="./assets/sobg.jpg" alt="backgroundImage" id="bg" />
+  <div class="box">
+    <h2>LogIn</h2>
+
+    <input type="email" placeholder="Email" #email />
+    <input type="password" placeholder="Password" #password />
+    <button type="submit" (click)="onSignin(email.value, password.value)">
+      LogIn
+    </button>
+    <a routerLink="#">Forgot password?</a>
+    <p>&</p>
+    <a routerLink="/signup">SignUp</a>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{height: 100%;margin: 0;}
+
+html{height: 100%;}
+progress::-webkit-progress-value {
+    transition: width 0.1s ease;
+  }

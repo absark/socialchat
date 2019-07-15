@@ -1,0 +1,33 @@
+
+
+   
+          <div class="d-flex justify-content-start mb-4"*ngIf="this.s.userId==null">  
+              <div class=" img_cont_msg">
+                  <img [src]="msg.img" class="rounded-circle user_img_msg">
+                </div>
+                <div [ngClass]="{msg_cotainer:userData.uid===msg.uid,msg_cotainer_send:userData.uid!==msg.uid}">
+                  <small>{{msg.userName}}</small>
+                  <p>{{msg.msg}}</p>
+                  <span class="msg_time">{{msg.timestamp.time}}</span>
+                </div>
+           </div>
+
+           <div class="d-flex justify-content-start mb-4"*ngIf="this.s.userId===userMsg.userId">  
+            <div class=" img_cont_msg">
+                <img [src]="msg.img" class="rounded-circle user_img_msg">
+              </div>
+              <div [ngClass]="{msg_cotainer:userData.uid===msg.uid,msg_cotainer_send:userData.uid!==msg.uid}">
+                <small>{{userMsg.userName}}</small>
+                <p>{{userMsg.msg}}</p>
+                <!-- <span class="msg_time">{{userMsg.timestamp.time}}</span> -->
+              </div>
+         </div>
+
+      
+     
+  
+  
+
+  
+      
+  

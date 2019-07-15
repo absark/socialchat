@@ -1,0 +1,13 @@
+nav{bottom: 0;position:fixed; width: 100%;
+}
+ul{justify-content: space-evenly;flex-grow: 1;flex-wrap: wrap; text-align : center;}
+
+
+li :hover{background-color:rgb(233, 201, 193);}
+
+
+
+nav{height:65px; display: none;}
+@media (max-width:768px){
+    nav{display: block;}
+}

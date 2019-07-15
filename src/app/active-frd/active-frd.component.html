@@ -1,0 +1,9 @@
+<div class=" justify-content-center" style="width:100%; text-align: center;font-size: large;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Slabo 27px', serif;" >
+    <div>Active Friends</div>
+    <hr>
+</div>
+<ul *ngFor="let user of users"class="bg-secondary">
+    <li style="color:rgb(152, 240, 152); margin-left: 20px;"><span style="color:white;">{{user.displayName}}</span></li>
+</ul>

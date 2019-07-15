@@ -1,0 +1,49 @@
+.bg{background-color: #3F51B5;}
+ .feed{
+    height:80vh !important;
+       overflow-y: scroll;
+      padding-top: 3px;
+       background-color: brown;
+      }
+      .heading{font-family: 'ZCOOL XiaoWei', serif;text-align: center;padding-right: 150px;padding-top: 10px}
+      @media(max-width:460px){
+         .heading{font-family: 'ZCOOL XiaoWei', serif;align-self: center; padding-right:70px;}
+      }
+ @media(max-width:600px){
+    .feed{
+          height: 80vh !important;
+          overflow-y: scroll;
+          margin-bottom:5px; 
+        }
+ }
+
+  @media(max-width:773px){
+   .heading{font-family: 'ZCOOL XiaoWei', serif;text-align: center;padding-right: 150px;}
+    .feed{
+          height: 392px;
+          overflow-y: scroll;
+          margin-bottom:5px; 
+        }
+    .activeusers{
+        display: none;
+    }
+    h5{display: none;}
+ } 
+ 
+ *{
+overflow: hidden;
+
+
+ }
+ .mainContainer{
+height: 100%;
+ }
+.activeusers{
+   padding: 0;
+   color: white;
+  
+}
+.mainContainer{
+   background-color: rgb(53, 53, 54);
+}
+
